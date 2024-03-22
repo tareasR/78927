@@ -1,0 +1,20 @@
+1) situarse en la carpeta calculadora/
+2) Si no existe crear META-INF
+3) touch META-INF/services.xml
+4) copiar el contenido siguiente a service.xml
+  <service name="calculadora">
+    <description>super calculadora</description>
+    <parameter name="ServiceClass">calculadora</parameter>
+    <operation name="suma">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+    <operation name="resta">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+  </service>
+5) crear el archivo de despliegue aar
+jar cvf calculadora.aar calculadora.class calculadora.wsdl META-INF
+6) ejecutar el servidor axis modificando en el archivo de script la linea:
+  org.apache.axis2.transport.SimpleAxis2Server 
+  org.apache.axis2.kernel.SimpleAxis2Server
+  axis2server.sh

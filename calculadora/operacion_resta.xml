@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:axis="http://ws.apache.org/axis2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <axis:resta>
+         <axis:args0>?</axis:args0>
+         <axis:args1>?</axis:args1>
+      </axis:resta>
+   </soapenv:Body>
+</soapenv:Envelope>
