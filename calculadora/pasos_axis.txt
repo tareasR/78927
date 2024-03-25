@@ -13,7 +13,8 @@
     </operation>
   </service>
 5) crear el archivo de despliegue aar
-jar cvf calculadora.aar calculadora.class calculadora.wsdl META-INF
+ jar cvf calculadora.aar calculadora.class calculadora.wsdl META-
+5.5) copie o se mueva el archivo calculadora.aar a la ruta del axis: /app/axis-version/repository/services
 6) ejecutar el servidor axis modificando en el archivo de script la linea:
   org.apache.axis2.transport.SimpleAxis2Server 
   org.apache.axis2.kernel.SimpleAxis2Server
